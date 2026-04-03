@@ -23,3 +23,19 @@ shape = SubResource("CapsuleShape3D_3li8b")
 [node name="RayCast3D" type="RayCast3D" parent="Head/Camera3D" unique_id=62954513]
 target_position = Vector3(0, 0, -1)
 script = ExtResource("2_v6fml")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=524080010]
+
+[node name="HUD" type="Control" parent="CanvasLayer" unique_id=351005777]
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 40.0
+grow_vertical = 0
+
+[node name="StateLabel" type="Label" parent="CanvasLayer/HUD" unique_id=1570078691]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0

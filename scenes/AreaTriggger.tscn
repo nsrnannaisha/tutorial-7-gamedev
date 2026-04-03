@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://btyos2l0louw7"]
 
-[ext_resource type="Script" uid="uid://dvttj48ixu180" path="res://AreaTrigger.gd" id="1_mm18p"]
+[ext_resource type="Script" uid="uid://dvttj48ixu180" path="res://scenes/AreaTrigger.gd" id="1_mm18p"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_mm18p"]
 size = Vector3(15.669647, 0.22998047, 14.526001)
