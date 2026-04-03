@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://doltqdncnrcbx"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_danfw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_un3v7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vpf61"]
+albedo_color = Color(0.9972299, 0.47754592, 0.71296227, 1)
+
+[node name="ObjLamp" type="Node3D" unique_id=1433296593]
+
+[node name="lamp" type="CSGCombiner3D" parent="." unique_id=524025896]
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="lamp" unique_id=1994225738]
+transform = Transform3D(1.0108567, 0, 0, 0, 1.0108567, 0, 0, 0, 1.0108567, 0, 0.078233205, 0)
+radius = 0.48339844
+height = 0.16532934
+cone = true
+material = SubResource("StandardMaterial3D_danfw")
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="lamp" unique_id=1786166736]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.56333923, 0)
+radius = 0.05
+height = 0.87332153
+material = SubResource("StandardMaterial3D_un3v7")
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="lamp" unique_id=2083660911]
+transform = Transform3D(0.9676105, 0, 0, 0, 1.8397979, 0, 0, 0, 0.9676105, 0, 0, 0)
+polygon = PackedVector2Array(0.052386664, 0.36568806, 0.056840416, 0.78596586, 0.36063895, 0.78252184, 0.76200867, 0.3740478)
+mode = 1
+spin_degrees = 360.0
+spin_sides = 8
+material = SubResource("StandardMaterial3D_vpf61")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1265957778]
+light_energy = 2.0
+omni_range = 50.0

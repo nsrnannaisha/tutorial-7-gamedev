@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://btyos2l0louw7"]
+
+[ext_resource type="Script" uid="uid://dvttj48ixu180" path="res://AreaTrigger.gd" id="1_mm18p"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mm18p"]
+size = Vector3(15.669647, 0.22998047, 14.526001)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_07hs7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_afnqo"]
+albedo_color = Color(1, 0, 0.14117648, 1)
+albedo_texture_force_srgb = true
+albedo_texture_msdf = true
+
+[node name="Area Trigger" type="Area3D" unique_id=665536362]
+script = ExtResource("1_mm18p")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2050568301]
+shape = SubResource("BoxShape3D_mm18p")
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="." unique_id=1660089859]
+visible = false
+mesh = SubResource("CapsuleMesh_07hs7")
+material = SubResource("StandardMaterial3D_afnqo")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

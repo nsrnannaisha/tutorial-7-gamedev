@@ -1,0 +1,144 @@
+[gd_scene format=3 uid="uid://cn88jo4txsk07"]
+
+[ext_resource type="PackedScene" uid="uid://doltqdncnrcbx" path="res://scenes/ObjLamp.tscn" id="1_gv26a"]
+[ext_resource type="Texture2D" uid="uid://chvedew7akoqn" path="res://assets/pink_batu.jpg" id="2_dcwdi"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gv26a"]
+albedo_color = Color(1, 0.8434942, 0.9018752, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dcwdi"]
+albedo_color = Color(1, 0.8434942, 0.9018752, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r16vw"]
+albedo_texture = ExtResource("2_dcwdi")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1rv7t"]
+albedo_texture = ExtResource("2_dcwdi")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_imm6p"]
+albedo_texture = ExtResource("2_dcwdi")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vrmse"]
+albedo_texture = ExtResource("2_dcwdi")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jw006"]
+albedo_texture = ExtResource("2_dcwdi")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ucgi8"]
+albedo_texture = ExtResource("2_dcwdi")
+
+[node name="World 1" type="Node3D" unique_id=688770500]
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=1505511083]
+use_collision = true
+
+[node name="Room 1" type="CSGBox3D" parent="CSGCombiner3D" unique_id=288354925]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6.579674)
+use_collision = true
+flip_faces = true
+size = Vector3(15, 10, 51.366867)
+material = SubResource("StandardMaterial3D_gv26a")
+
+[node name="ObjLamp" parent="CSGCombiner3D/Room 1" unique_id=1433296593 instance=ExtResource("1_gv26a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.312376, -4.9940734, 15.136071)
+
+[node name="ObjLamp2" parent="CSGCombiner3D/Room 1/ObjLamp" unique_id=1388455286 instance=ExtResource("1_gv26a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.612376, 7.343292e-05, 0.3639288)
+
+[node name="ObjLamp3" parent="CSGCombiner3D/Room 1/ObjLamp" unique_id=13315901 instance=ExtResource("1_gv26a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6.539378)
+
+[node name="ObjLamp4" parent="CSGCombiner3D/Room 1/ObjLamp" unique_id=981159512 instance=ExtResource("1_gv26a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.612376, 7.343292e-05, 6.538928)
+
+[node name="ObjLamp6" parent="CSGCombiner3D/Room 1/ObjLamp" unique_id=1013937142 instance=ExtResource("1_gv26a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -38.493797)
+
+[node name="ObjLamp7" parent="CSGCombiner3D/Room 1/ObjLamp" unique_id=1459144794 instance=ExtResource("1_gv26a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.55835, 0, -38.659065)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGCombiner3D/Room 1" unique_id=499139478]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.2, 16.183027)
+light_energy = 2.5
+omni_range = 20.0
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="CSGCombiner3D/Room 1" unique_id=163001823]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.2, -14.016222)
+light_energy = 2.5
+omni_range = 20.0
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="CSGCombiner3D/Room 1" unique_id=526439509]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.2, 1.7021785)
+light_energy = 2.5
+omni_range = 20.0
+
+[node name="New Room" type="CSGBox3D" parent="CSGCombiner3D" unique_id=93002134]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.413208, 0.038208008, -37.85564)
+flip_faces = true
+size = Vector3(30.421, 10.076, 12.173073)
+material = SubResource("StandardMaterial3D_dcwdi")
+
+[node name="ObjLamp4" parent="CSGCombiner3D/New Room" unique_id=1019912290 instance=ExtResource("1_gv26a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.725584, -5.0322814, -4.5203514)
+
+[node name="ObjLamp5" parent="CSGCombiner3D/New Room/ObjLamp4" unique_id=1241777671 instance=ExtResource("1_gv26a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.55835, 0, -0.16526794)
+
+[node name="ObjLamp6" parent="CSGCombiner3D/New Room/ObjLamp4" unique_id=58774612 instance=ExtResource("1_gv26a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.7266, 0, 9.428738)
+
+[node name="ObjLamp7" parent="CSGCombiner3D/New Room/ObjLamp4" unique_id=1802889317 instance=ExtResource("1_gv26a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.512184, 0, 9.428738)
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="CSGCombiner3D/New Room" unique_id=1739889325]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.071, 3.2, -1.193)
+light_energy = 2.5
+omni_range = 20.0
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="CSGCombiner3D/New Room" unique_id=1010618774]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.198, 3.2, -1.193)
+light_energy = 2.5
+omni_range = 20.0
+
+[node name="Hole" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1404858653]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9.8286, -9.2342205)
+size = Vector3(15, 9.711343, 25.53675)
+
+[node name="Batu 1" type="CSGBox3D" parent="." unique_id=282258816]
+transform = Transform3D(0.9181316, 0, 0, 0, 1, 0, 0, 0, 1, -0.004385948, -5.4860506, 0.60080457)
+use_collision = true
+size = Vector3(11.156, 1.034, 3)
+material = SubResource("StandardMaterial3D_r16vw")
+
+[node name="Batu 2" type="CSGBox3D" parent="." unique_id=168565826]
+transform = Transform3D(0.8429656, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.46612, -3.8474946)
+use_collision = true
+size = Vector3(3, 1, 3.0325012)
+material = SubResource("StandardMaterial3D_1rv7t")
+
+[node name="Batu 3" type="CSGBox3D" parent="." unique_id=596568547]
+transform = Transform3D(0.7739534, 0, 0, 0, 1, 0, 0, 0, 1, -0.0046057403, -5.4551992, -9.206303)
+use_collision = true
+size = Vector3(3.4159546, 1, 4.6021423)
+material = SubResource("StandardMaterial3D_imm6p")
+
+[node name="Batu 3_1" type="CSGBox3D" parent="Batu 3" unique_id=1292539782]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.849238, 0, -1.1632309)
+use_collision = true
+size = Vector3(3, 1, 2.2756805)
+material = SubResource("StandardMaterial3D_vrmse")
+
+[node name="ObjLamp3" parent="Batu 3/Batu 3_1" unique_id=1047138507 instance=ExtResource("1_gv26a")]
+transform = Transform3D(1.2920675, 0, 0, 0, 1, 0, 0, 0, 1, 0.20446539, 0.46112585, -0.1288147)
+
+[node name="Batu 4" type="CSGBox3D" parent="." unique_id=195742272]
+transform = Transform3D(0.9181316, 0, 0, 0, 1, 0, 0, 0, 1, -1.9883088, -5.4860506, -14.782443)
+use_collision = true
+size = Vector3(6.8343477, 1.034, 3.4089355)
+material = SubResource("StandardMaterial3D_jw006")
+
+[node name="Batu 5" type="CSGBox3D" parent="." unique_id=801040675]
+transform = Transform3D(0.9181316, 0, 0, 0, 1, 0, 0, 0, 1, -3.8374414, -5.4860506, -19.47379)
+use_collision = true
+size = Vector3(3, 1.034, 3)
+material = SubResource("StandardMaterial3D_ucgi8")
